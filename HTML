@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sevens - Creative Design Agency</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow: hidden; /* Crucial: Prevent scrolling */
+        }
+        /* Ensure the main content takes up remaining vertical space */
+        #root-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Make the whole page at least viewport height */
+        }
+        main {
+            flex-grow: 1; /* Allow main content to expand and push footer down */
+            display: flex; /* For centering hero content */
+            align-items: center; /* Vertically center hero content */
+            justify-content: center; /* Horizontally center hero content */
+            text-align: center; /* Align text within hero */
+        }
+        /* Overlay to darken the image slightly for text readability if needed */
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Darkens the image */
+            z-index: 5; /* Below text, above image */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800" id="root-container">
+
+    <!-- Navigation Bar -->
+    <header class="bg-white shadow-sm w-full z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900 rounded-md p-2">
+                The Sevens
+            </a>
+            <div class="flex space-x-4 lg:space-x-8">
+                <!-- Navigation links with padded box styling -->
+                <!-- These links point to '#' as the page is non-scrollable and does not have distinct sections -->
+                <a href="#" class="text-gray-800 hover:text-gray-900 font-medium px-4 py-2 rounded-lg transition duration-200 hover:bg-gray-100">About</a>
+                <a href="#" class="text-gray-800 hover:text-gray-900 font-medium px-4 py-2 rounded-lg transition duration-200 hover:bg-gray-100">Portfolio</a>
+                <a href="#" class="text-gray-800 hover:text-gray-900 font-medium px-4 py-2 rounded-lg transition duration-200 hover:bg-gray-100">Contact</a>
+            </div>
+            <!-- Mobile Menu Button removed as per single-view, non-scrollable request -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section - Now the only content section -->
+        <section id="hero" class="relative text-white flex items-center justify-center text-center overflow-hidden w-full h-full py-20 px-4">
+            <!-- Background Image: Spotted Modern Building from Pexels in full bleed -->
+            <img src="https://images.pexels.com/photos/14985628/pexels-photo-14985628.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                 onerror="this.src='https://placehold.co/1920x1080/334155/FFFFFF?text=Creative+Design+Solutions';"
+                 alt="Background: Spotted Modern Building"
+                 class="absolute inset-0 w-full h-full object-cover">
+            
+            <!-- Removed existing gradient classes and added a subtle dark overlay for readability -->
+            <div class="hero-overlay"></div>
+
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                    Design That Inspires.
+                </h1>
+                <p class="text-lg sm:text-xl font-light mb-10 opacity-90 max-w-2xl mx-auto">
+                    We are The Sevens, a design agency passionately crafting compelling brands and intuitive experiences for a digital-first world.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a href="#" class="bg-[#d2f898] text-gray-900 hover:bg-opacity-80 px-8 py-3 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 shadow-lg inline-block">
+                        View Our Portfolio
+                    </a>
+                    <a href="#" class="bg-white text-gray-900 hover:bg-gray-100 px-8 py-3 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 shadow-lg inline-block border-2 border-[#d2f898]">
+                        Hire Us
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Minimal for a non-scrollable page -->
+    <footer class="bg-gray-800 text-gray-300 py-4 px-4 mt-auto">
+        <div class="container mx-auto text-center">
+            <p class="text-sm">&copy; 2025 The Sevens. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // No JavaScript needed for scrolling or mobile menu on this single-view, non-scrollable page.
+    </script>
+</body>
+</html>
